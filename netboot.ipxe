@@ -1,0 +1,4 @@
+#!ipxe
+#dhcp net0
+chain http://172.16.179.10/pxelinux.0
+boot
