@@ -1,4 +1,3 @@
 #!ipxe
-#dhcp net0
-chain http://172.16.179.10/pxelinux.0
+chain https://raw.githubusercontent.com/ruizink/cloud-booting/master/pxelinux.0
 boot
