@@ -11,7 +11,7 @@ LOCALBOOT 0
 
 LABEL install_centos5
 MENU LABEL CentOS ^5.11 (64-bit) Install
-KERNEL http://172.16.179.10/centos-5/5.11/os/x86_64/images/pxeboot/vmlinuz
+KERNEL http://172.16.179.10/centos-5/images/vmlinuz
 #KERNEL http://mirror.centos.org/centos-5/5.11/os/x86_64/images/pxeboot/vmlinuz
 APPEND text nofb initrd=http://172.16.179.10/centos-5/images/initrd.img ksdevice=eth0 network ks=https://raw.githubusercontent.com/ruizink/cloud-booting/master/ks/el5.ks
 #APPEND text nofb initrd=http://mirror.centos.org/centos-5/5.11/os/x86_64/images/pxeboot/initrd.img ksdevice=eth0 network ks=https://raw.githubusercontent.com/ruizink/cloud-booting/master/ks/el5.ks
