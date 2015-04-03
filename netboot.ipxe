@@ -7,16 +7,16 @@ item reboot Reboot
 choose selection && goto ${selection}
 
 :centos_5
-kernel https://raw.githubusercontent.com/ruizink/cloud-booting/master/centos-5/images/vmlinuz ip=dhcp ksdevice=eth0 ks=http://sprunge.us/NTUj
-initrd https://raw.githubusercontent.com/ruizink/cloud-booting/master/centos-5/images/initrd.img
+kernel http://mirror.centos.org/centos-5/5.11/os/x86_64/images/pxeboot/vmlinuz ip=dhcp ksdevice=eth0 ks=http://sprunge.us/NTUj
+initrd http://mirror.centos.org/centos-5/5.11/os/x86_64/images/pxeboot/initrd.img
 initrd https://raw.githubusercontent.com/ruizink/cloud-booting/master/patched_modules/module-info /modules/module-info
 initrd https://raw.githubusercontent.com/ruizink/cloud-booting/master/patched_modules/modules.alias /modules/modules.alias
 initrd https://raw.githubusercontent.com/ruizink/cloud-booting/master/patched_modules/modules.cgz /modules/modules.cgz
 goto boot_kernel
 
 :centos_6
-kernel https://raw.githubusercontent.com/ruizink/cloud-booting/master/centos-6/images/vmlinuz ip=dhcp ksdevice=eth0 ks=http://sprunge.us/DGOM
-initrd https://raw.githubusercontent.com/ruizink/cloud-booting/master/centos-6/images/initrd.img
+kernel http://mirror.centos.org/centos-6/6.6/os/x86_64/images/pxeboot/vmlinuz ip=dhcp ksdevice=eth0 ks=http://sprunge.us/DGOM
+initrd http://mirror.centos.org/centos-6/6.6/os/x86_64/images/pxeboot/initrd.img
 goto boot_kernel
 
 :boot_kernel
