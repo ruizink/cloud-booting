@@ -5,9 +5,12 @@ chain --autofree netboot.ipxe.cfg ||
 
 # Main menu
 menu
-item centos_5 CentOS 5.11 (x86_64)
-item centos_6 CentOS 6.6 (x86_64)
-item reboot Reboot
+item --gap --             ------------------------- Select an action ------------------------------
+item --key 5 centos_5     Install CentOS 5.11 (x86_64)
+item --key 6 centos_6     Install CentOS 6.6 (x86_64)
+item --key r reboot       Reboot
+item
+item --key x exit         Exit iPXE and continue BIOS boot
 choose selection && goto ${selection}
 
 # Menu item Centos 5
