@@ -24,7 +24,7 @@ goto boot_kernel
 
 # Menu item Centos 6
 :centos_6
-kernel ${centos6_img_url}/vmlinuz ip=dhcp ksdevice=eth0 ks=${centos6_ks_url}
+kernel ${centos6_img_url}/vmlinuz ip=dhcp ksdevice=eth0 ks=${centos6_ks_url} noverifyssl
 initrd ${centos5_img_url}/initrd.img
 goto boot_kernel
 
