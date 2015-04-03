@@ -7,7 +7,6 @@ firstboot --disable
 keyboard pt-latin1
 lang en_US
 logging --level=info
-cdrom
 network --bootproto=dhcp --noipv6 device=eth0 --onboot=on
 
 reboot
