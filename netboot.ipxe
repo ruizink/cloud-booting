@@ -17,9 +17,9 @@ choose selection && goto ${selection}
 :centos_5
 kernel ${centos5_img_url}/vmlinuz ip=dhcp ksdevice=eth0 ks=${centos5_ks_url}
 initrd ${centos5_img_url}/initrd.img
-initrd ${github_base_url}/centos-5/patched_modules/module-info /modules/module-info
-initrd ${github_base_url}/centos-5/patched_modules/modules.alias /modules/modules.alias
-initrd ${github_base_url}/centos-5/patched_modules/modules.cgz /modules/modules.cgz
+module ${github_base_url}/centos-5/patched_modules/module-info /modules/module-info
+module ${github_base_url}/centos-5/patched_modules/modules.alias /modules/modules.alias
+module ${github_base_url}/centos-5/patched_modules/modules.cgz /modules/modules.cgz
 goto boot_kernel
 
 # Menu item Centos 6
