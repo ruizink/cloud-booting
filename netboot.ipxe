@@ -11,6 +11,18 @@ item --key 6 centos_6     Install CentOS 6.6 (x86_64)
 item --key r reboot       Reboot
 item
 item --key x exit         Exit iPXE and continue BIOS boot
+item
+item
+item
+item --gap --             ---------------------------- Host info ----------------------------------
+item --gap                MAC address......${net0/mac} ||
+item --gap                IP address.......${ip}/${netmask} ||
+item --gap                Default gateway..${gateway} ||
+item --gap                DNS server.......${dns} ||
+item --gap                Serial...........${serial} ||
+item --gap                Manufacturer.....${manufacturer} ||
+item --gap                Product..........${product} ||
+item --gap                BIOS platform....${platform} ||
 choose selection && goto ${selection}
 
 # Menu item Centos 5
@@ -36,9 +48,12 @@ reboot
 # Common
 :boot_kernel
 echo
-echo ************************* LOADED IMAGES *************************
+echo
+echo -- -------------------------- Loaded images --------------------------------
 imgstat
-echo *****************************************************************
-echo Booting...
-sleep 10
+echo -- -------------------------------------------------------------------------
+echo
+echo
+echo Booting in ${sleep_delay} seconds...
+sleep ${sleep_delay}
 boot
